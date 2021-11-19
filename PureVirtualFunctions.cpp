@@ -43,15 +43,15 @@ public:
         cout<<x;
     }
     
-    /*void getY()
+    void getY()
     {
         cout<<y;
-    }*/
+    }
     
-    /*void printScore()
+    void printScore()
     {
         cout<<"score="<<score;
-    }*/
+    }
 };
 int main()
 {
