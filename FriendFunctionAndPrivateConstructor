@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include<iostream>
+
+using namespace std;
+
+class A{
+    
+ private:
+ A()
+ {
+     cout<<"A";
+     
+ }
+ 
+
+ public :
+ virtual ~A()
+ {
+     cout<<"~A";
+ }
+ 
+ virtual void getA(){};
+ 
+ friend class B;
+    
+};
+
+
+class B : public A{
+    
+    public:
+    
+    B()
+    {
+        
+    }
+    
+    ~B()
+   {
+     cout<<"~B";
+   }
+    void getA(){}
+    
+    void getB(){}
+};
+
+
+int main()
+{
+    
+    A *base1 = new B();
+    delete base1;
+
+}
