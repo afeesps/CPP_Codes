@@ -1,0 +1,70 @@
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+bool flag = false;
+
+void delete_apple(string s)
+{
+
+
+    int k = 0;
+    
+    flag = false;
+    
+    string op;
+    for(uint32_t i =0;i < s.length();)
+    {
+        
+        if(s.substr(i,5) == "apple")
+        {
+            flag = true;
+            i=i+5;
+            continue;
+            
+        }
+        
+        else {
+          op[k++] = s[i++]; 
+        }
+    }
+    
+    
+    if(flag == false)
+    {
+       cout<<op;
+       return;
+    }
+    delete_apple(op);
+    printf("%s",op.c_str());
+    
+}
+
+
+
+int main () {
+    /*
+     * recursively remove apple out of input string
+     * print remaining string as an output string
+    */
+    string s = "piapaappleppappleleplene";
+ /*
+ piapaappleppappleleplene
+ piapappleplene
+ piapplene
+ pine
+ */
+ 
+ 
+   
+    
+ 
+    //printf("input  : %s\n", input);
+    delete_apple(s);
+    //printf("output : %s\n", input);
+}
